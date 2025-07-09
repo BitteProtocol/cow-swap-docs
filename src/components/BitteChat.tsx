@@ -70,7 +70,10 @@ export default function BitteChat() {
         },
       }}
       widget={{
-        triggerButtonType: 'dark',
+        triggerButtonStyles: {
+          backgroundColor: '#84D7FB',
+          logoColor: '#000000',
+        },
         widgetWelcomePrompts: {
           questions: ['What is CoW Swap?', 'How does CoW Protocol work?', 'What are the benefits of using CoW Swap?'],
           actions: ['Swap tokens', 'Check price', 'View orders'],
