@@ -76,7 +76,6 @@ export default function BitteChat() {
         },
         widgetWelcomePrompts: {
           questions: ['What is CoW Swap?', 'How does CoW Protocol work?', 'What are the benefits of using CoW Swap?'],
-          actions: ['Swap tokens', 'Check price', 'View orders'],
         },
       }}
     />
