@@ -1,4 +1,4 @@
-const { BITTE_API_KEY, BITTE_API_URL = 'https://ai-runtime-446257178793.europe-west1.run.app' } = process.env
+const { BITTE_API_KEY, BITTE_API_URL = 'https://ai-runtime-markdown-446257178793.europe-west1.run.app' } = process.env
 
 export const dynamic = 'force-dynamic'
 export const maxDuration = 60
