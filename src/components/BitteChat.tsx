@@ -50,6 +50,7 @@ export default function BitteChat() {
 
   return (
     <BitteWidgetChat
+      isMarkdown={true}
       agentId="near-cow-agent-git-docs-bitteprotocol.vercel.app"
       options={{
         agentName: 'CoW Swap Assistant',
