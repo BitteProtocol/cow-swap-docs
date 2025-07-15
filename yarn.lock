@@ -1158,16 +1158,16 @@
     "@babel/helper-string-parser" "^7.27.1"
     "@babel/helper-validator-identifier" "^7.27.1"
 
-"@bitte-ai/chat@0.15.0-markdown-cow-swap":
-  version "0.15.0-markdown-cow-swap"
-  resolved "https://registry.yarnpkg.com/@bitte-ai/chat/-/chat-0.15.0-markdown-cow-swap.tgz#b0a968e989eabee6ca480edb802a2e5ebfff62d7"
-  integrity sha512-mBuFRgm0EeNE5gT6rF+3CsWpzV9iErbpGHlYQAcAZJIQA3Jr2Qmfht0IoJALs3V5VOcNAhYdM8gscsewj24brw==
+"@bitte-ai/chat@0.15.0-markdown-cow-swap-fix":
+  version "0.15.0-markdown-cow-swap-fix"
+  resolved "https://registry.yarnpkg.com/@bitte-ai/chat/-/chat-0.15.0-markdown-cow-swap-fix.tgz#26e868af57b29afe7d0c0fb81afcacef41883539"
+  integrity sha512-SFzMZfIBus6d9q61/lsue+4hzyDxIWRPJuERsr4P+qmRBfA+rNSiTQ7aJu2GrhOqKa3HlKoomyMF3EUKnzm7Ag==
   dependencies:
     "@ai-sdk/anthropic" "^1.0.2"
     "@ai-sdk/openai" "^1.0.5"
     "@ai-sdk/react" "^1.2.12"
     "@ai-sdk/xai" "^1.0.4"
-    "@bitte-ai/types" "workspace:*"
+    "@bitte-ai/types" "0.7.0-beta.1"
     "@mintbase-js/data" "^0.6.5"
     "@mintbase-js/rpc" "^0.6.5"
     "@mysten/sui" "^1.26.0"
@@ -1207,10 +1207,10 @@
     wagmi "^2.15.6"
     zod "^3.24.1"
 
-"@bitte-ai/types@workspace:*":
-  version "0.15.0-markdown-beta-support"
-  resolved "https://registry.yarnpkg.com/@bitte-ai/types/-/types-0.15.0-markdown-beta-support.tgz#a60c501de2a948ddfe2f4c70afe7197c53e69e85"
-  integrity sha512-LsyxUgHs8vhCHfrC8n+anzAaqA4GY10RUNS78jWbfbTk559T3wT/7ldAs445ZwQU4VyIxH8VLt7eYRyBQW+VEw==
+"@bitte-ai/types@0.7.0-beta.1":
+  version "0.7.0-beta.1"
+  resolved "https://registry.yarnpkg.com/@bitte-ai/types/-/types-0.7.0-beta.1.tgz#8c14414c9c2de30e0743b4745eada3bc9df125b9"
+  integrity sha512-XpUEIrLPewOKAoJ6/aFUsB8xFpv2R0TzJQ4kOaP8I3dDFiUm7f3CbJiQtZ9hcFdF4m3MB3lt0iovDt0mm2L36w==
   dependencies:
     "@mysten/sui" "^1.26.0"
     "@near-wallet-selector/core" "^8.9.0"
@@ -16316,6 +16316,7 @@ wordwrap@^1.0.0:
   integrity sha512-gvVzJFlPycKc5dZN4yPkP8w7Dc37BtP1yczEneOb4uq34pXZcvrtRTmWV8W+Ume+XCxKgbjM+nevkyFPMybd4Q==
 
 "wrap-ansi-cjs@npm:wrap-ansi@^7.0.0", wrap-ansi@^7.0.0:
+  name wrap-ansi-cjs
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/wrap-ansi/-/wrap-ansi-7.0.0.tgz#67e145cff510a6a6984bdf1152911d69d2eb9e43"
   integrity sha512-YVGIj2kamLSTxw6NsZjoBxfSwsn0ycdesmc4p+Q21c5zPuZ1pl+NfxVdxPtdHvmNVOQ6XSYG4AUtyt/Fi7D16Q==
