@@ -1158,10 +1158,10 @@
     "@babel/helper-string-parser" "^7.27.1"
     "@babel/helper-validator-identifier" "^7.27.1"
 
-"@bitte-ai/chat@0.15.0-markdown-cow-swap-fix-2":
-  version "0.15.0-markdown-cow-swap-fix-2"
-  resolved "https://registry.yarnpkg.com/@bitte-ai/chat/-/chat-0.15.0-markdown-cow-swap-fix-2.tgz#7ebe3bfb9ead2fa587bbc067b69a2b6d7dd498df"
-  integrity sha512-2MM7RfjPO4ljbOBo4kko3cyiR0gABg+viUzTvUol106oSss/ozsw/EJuBtA5HN+byitFEktT3D2RHkwJ4BzPjA==
+"@bitte-ai/chat@0.15.0-markdown-cow-swap-3":
+  version "0.15.0-markdown-cow-swap-3"
+  resolved "https://registry.yarnpkg.com/@bitte-ai/chat/-/chat-0.15.0-markdown-cow-swap-3.tgz#f25d34190ea129ead24fa49e41c24bf0d61ed085"
+  integrity sha512-lDZD8PgTAB+QYOKA70jpqtmqKKKN+il3/VF276s7MXFdXMjXU+hGx7/eysVT/Q9TDfdXG+mx6YsbhfpIGtaT9A==
   dependencies:
     "@ai-sdk/anthropic" "^1.0.2"
     "@ai-sdk/openai" "^1.0.5"

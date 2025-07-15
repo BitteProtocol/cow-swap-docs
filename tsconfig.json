@@ -6,6 +6,7 @@
     "resolveJsonModule": true,
     // Extend '@tsconfig/docusaurs/tsconfig.json'.types with 'docusaurus-json-schema-plugin'
     "types": ["node", "@docusaurus/module-type-aliases", "@docusaurus/theme-classic", "docusaurus-json-schema-plugin"],
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "jsx": "react-jsx"
   }
 }
