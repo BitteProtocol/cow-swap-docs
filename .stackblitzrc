@@ -1,4 +1,4 @@
 {
     "installDependencies": true,
-    "startCommand": "yarn build:external && yarn start"
+    "startCommand": "pnpm build:external && pnpm start"
 }
