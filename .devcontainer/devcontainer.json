@@ -9,5 +9,5 @@
 				]
 			}
 		},
-	"postCreateCommand": "pnpm install && pnpm build"
+	"postCreateCommand": "yarn install && yarn build"
 }

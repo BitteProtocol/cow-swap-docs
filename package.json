@@ -7,10 +7,10 @@
     "start": "docusaurus start",
     "git:clone:cowsdk": "cd external && rm -rf cow-sdk && git clone --depth=1 --branch=main https://github.com/cowprotocol/cow-sdk cow-sdk && rm -rf cow-sdk/.git",
     "git:clone:appdata": "cd external && rm -rf app-data && git clone --depth=1 --branch=main https://github.com/cowprotocol/app-data app-data && rm -rf app-data/.git",
-    "build:external:cowsdk": "pnpm git:clone:cowsdk && cd external/cow-sdk && pnpm install --ignore-scripts && pnpm codegen",
-    "build:external:appdata": "pnpm git:clone:appdata && cd external/app-data && pnpm install --ignore-scripts && pnpm compile",
-    "build:external": "pnpm build:external:cowsdk && pnpm build:external:appdata",
-    "build": "pnpm build:external && docusaurus build",
+    "build:external:cowsdk": "yarn git:clone:cowsdk && cd external/cow-sdk && yarn install --frozen --ignore-scripts && yarn codegen",
+    "build:external:appdata": "yarn git:clone:appdata && cd external/app-data && yarn install --frozen --ignore-scripts && yarn compile",
+    "build:external": "yarn build:external:cowsdk && yarn build:external:appdata",
+    "build": "yarn build:external && docusaurus build",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
     "clear": "docusaurus clear",
@@ -21,7 +21,7 @@
     "fmt": "prettier --write \"**/*.md\""
   },
   "dependencies": {
-    "@bitte-ai/chat": "^0.21.1",
+    "@bitte-ai/chat": "^0.19.15",
     "@docusaurus/core": "^3.8.0",
     "@docusaurus/plugin-google-gtag": "^3.8.0",
     "@docusaurus/plugin-ideal-image": "^3.8.0",
