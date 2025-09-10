@@ -7,7 +7,7 @@
     "start": "docusaurus start",
     "git:clone:cowsdk": "mkdir -p external && cd external && rm -rf cow-sdk && git clone --depth=1 --branch=main https://github.com/cowprotocol/cow-sdk cow-sdk && rm -rf cow-sdk/.git",
     "git:clone:appdata": "mkdir -p external && cd external && rm -rf app-data && git clone --depth=1 --branch=main https://github.com/cowprotocol/app-data app-data && rm -rf app-data/.git",
-    "build:external:cowsdk": "yarn git:clone:cowsdk && cd external/cow-sdk && pnpm install --ignore-scripts && pnpm codegen",
+    "build:external:cowsdk": "yarn git:clone:cowsdk && cd external/cow-sdk && rm -f pnpm-lock.yaml && pnpm install --ignore-scripts --registry https://registry.npmjs.org && pnpm codegen",
     "build:external:appdata": "yarn git:clone:appdata && cd external/app-data && yarn install --ignore-scripts && yarn compile",
     "build:external": "yarn build:external:cowsdk && yarn build:external:appdata",
     "build": "yarn build:external && docusaurus build",
