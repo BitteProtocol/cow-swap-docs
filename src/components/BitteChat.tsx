@@ -1,6 +1,84 @@
-import React from 'react'
+import { useState, useEffect } from 'react'
 
-// Temporarily disabled to isolate @noble/hashes dependency conflicts
+// Polyfill for Node.js globals in browser
+if (typeof window !== 'undefined') {
+  // @ts-ignore
+  window.global = window.global || window
+  // @ts-ignore
+  window.process = window.process || { env: {}, browser: true }
+}
+
 export default function BitteChat() {
-  return null
+  const [BitteWidgetChat, setBitteWidgetChat] = useState<any>(null)
+  const [loading, setLoading] = useState<boolean>(true)
+
+  useEffect(() => {
+    let isMounted = true
+
+    const loadWidget = async () => {
+      try {
+        const module = await import('@bitte-ai/chat')
+
+        if (isMounted) {
+          const Component = module.BitteWidgetChat || module.default
+
+          if (Component) {
+            setBitteWidgetChat(() => Component)
+          } else {
+            console.warn('BitteWidgetChat component not found')
+          }
+        }
+      } catch (err) {
+        console.warn('Failed to load BitteWidgetChat:', err)
+      } finally {
+        if (isMounted) {
+          setLoading(false)
+        }
+      }
+    }
+
+    loadWidget()
+
+    return () => {
+      isMounted = false
+    }
+  }, [])
+
+  if (loading || !BitteWidgetChat) {
+    return null
+  }
+
+  return (
+    <BitteWidgetChat
+      format="markdown"
+      agentId="near-cow-agent-git-docs-bitteprotocol.vercel.app"
+      options={{
+        agentName: 'CoW Swap Assistant',
+        agentImage: '/img/favicon-dark-mode.png',
+      }}
+      apiUrl="/api/bitte/chat"
+      historyApiUrl="/api/bitte/history"
+      wallet={{
+        evm: {
+          address: undefined,
+          sendTransaction: async () => {
+            console.warn('sendTransaction not implemented yet')
+            return null
+          },
+          switchChain: async () => {
+            console.warn('switchChain not implemented yet')
+          },
+        },
+      }}
+      widget={{
+        triggerButtonStyles: {
+          backgroundColor: '#84D7FB',
+          logoColor: '#000000',
+        },
+        widgetWelcomePrompts: {
+          questions: ['What is CoW Swap?', 'How does CoW Protocol work?', 'What are the benefits of using CoW Swap?'],
+        },
+      }}
+    />
+  )
 }
